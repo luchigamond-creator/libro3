@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora la web de libros</title>
+<style>
+    /*reset basico de margenes y padding*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+     body{
+        margin:2px;
+        font-family:'Times New Roman',Times, serif;
+        background-color: rgb(255, 255, 255);
+        }
+    /*Contenedor pincipal del header*/
+    .header {
+        display: flex; /*activa el flexbox*/
+        align-items: center; /*cemtra verticalmente los elementos*/
+        justify-content: space-between; /*distribuye: el logo a la izquierda, el nav al cetro y el boton a la derecha*/
+        width: 100%;
+        height: 80px;
+        padding: 15px 30px;
+        background-color: rgb(234, 228, 228);
+        border-bottom: 2px solid rgb(0, 0, 0); /*borde inferior*/
+    }
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(19, 18, 18);
+        padding: 5px 10px; /*espacio interno*/
+        border: 1px solid black;
+        border-radius: 4px; /*equina redondeada*/
+    }
+    /*navegacion*/
+    .nav {
+        display: flex;
+        gap: 20px; /*distancia entre los elementos*/
+        padding: 10px 0;
+    }
+    .nav a{
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.35;
+    }
+    .nav a:hover {
+        color: #4f65c5;
+    }
+    .BTN{
+        text-decoration: none;
+        font-size: 16px;
+        padding: 16px;
+        border-radius: 8px 12px;
+        transition: background-color 0.35;
+        cursor: pointer;
+        letter-spacing: 1px;
+        /*Transicion que propiedades animar y duración*/
+        transition:
+        transform 0.3s ease;
+        box-shadow: 0.3s ease;
+        background: 0.3s ease;
+        color: #176fa5;
+    }
+
+    /* efecto al pasar el mouse*/
+    .BTN:hover{
+/*transform: escala y eleva el boton*/
+    transform: translateY (-4px) scale(1.05);
+    box-shadow: 0 15px 30px rgba (120,32, 36, 0.6);
+    background: linearGradient(135deg, #293568, #295068 )
+    }
+   /*efecto al hacer click */
+    .BTN:active{
+/*vuelve a su posición original*/
+transform: translateY(2px)scale(0.98);
+box-shadow: 0 4px 10px rgba(34, 32, 120, 0.6);
+    }
+
+
+    .footer{
+        display: flex; /*activa el flexbox*/
+        align-items: center; /*centra verticalmente los elementos*/
+        justify-content: space-between; /*distribuye: el logo a la izquierda, el nav al cetro y el boton a la derecha*/
+        width: 100%;
+        height: 80px;
+        padding: 15px 30px;
+        background-color: rgb(234, 228, 228);
+        border-top: 2px solid rgb(0, 0, 0); /*borde inferior*/
+    }
+
+    .navi{
+        display: flex;
+        gap: 20px; /*distancia entre los elementos*/
+        padding: 10px 0;
+    }
+    .navi a{
+      text-decoration: none;
+        color: #293568;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.35;
+    }
+    .navi a:hover {
+        background-color: #8298e0;
+    }
+    .menu{
+        display: flex;
+        justify-content: row;
+        gap: 20px;
+        background-color: #4b82a7;
+    }
+    .aside{
+        display: flex;
+        width: 350px;
+        height: 490px;
+        padding: 20px;
+        background-color: white ;
+        text-decoration: none;
+        
+    }
+
+    .nav2 h2{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+     padding: 16px;
+    }
+
+    .info{
+        display: flex;
+        padding: 15px;
+        border-radius: 20px;
+        align-items: center;
+        margin-bottom: 20px
+    }
+         .large-icons{
+        font-size: 24px;
+        color: #156da0;
+    }
+      /*para las pantallas pqueñas colapsar los elementos en clumnas*/
+     @media (max_width: 600px){
+    .header {
+     flex-direction:colum;
+     padding:15px;
+     gap: 15px; 
+    }
+    .nav{
+     justify-content:center;
+    }
+    } 
+   
+</style>
+<body>
+<header class="header">
+    <div class="logo">Mi pagina </div>
+<nav class="nav">
+    <i class="material-icons-outlined large-icons  ">
+        search
+    </i>
+    <a href="#">Busqueda</a>
+
+     <i class="material-icons-outlined  large-icons" >
+        money
+    </i>
+   <a href="https://www.buscalibre.com.ar/">Comprar libros</a>
+
+    <i class="material-icons-outlined  large-icons">
+        star
+    </i>
+    <a href="https://www.planetadelibros.com/blog/critica-literaria">Criticas literarias</a>
+
+    <i class="material-icons-outlined  large-icons" >
+     photo
+    </i>
+    <a href="https://www.youtube.com/watch?v=-YL-xqD6aR8">Blog</a>
+</nav>
+<button class="BTN">Registrarse</button>
+</header>
+ <main class="menu">
+    <aside class="aside">
+        <nav class="nav2">
+        <h2>
+     Leer un libro es un ejercicio fundamental que estimula el cerebro, reduce el estres y mejora la concentración. Además, amplia tu vocabulario, desarrolla el pensamiento critico, y te permite experimentar múltiples vidas y perspectivas, lo cual aumenta considerablemente la empatia. 
+        </h2>
+        <img src="https://sbslibreria.vtexassets.com/arquivos/ids/5079237-1200-auto?v=638855604128400000&width=1200&height=auto&aspect=true" alt="descripcion" width="210px" height="270px">
+      </nav>
+    </aside>
+
+    <div class="info">
+     <ul>
+        <li>Es una novela romántica y de crecimiento personal que sigue la vida de dos amigos inseparables,Nicki y River, desde su infancia hasta la adultez.</li>
+        <li>Ambientada en un pequeño pueblo costero de Maine.</li>
+        <li>La historia explora la amistad profunda, el primer amor, el paso del tiempo y las dificultades de encontrar el propio mundo.</li>
+        <li>El libro se destaca por los siguientes temas:</li>
+        <ul>-Relación profunda.</ul>
+        <ul>-Personajes corales.</ul>
+        <ul>-Tonos realistas.</ul>
+      </ul>
+    </div>
+      
+
+ </main>
+<footer class="footer"> 
+    <nav class="navi">
+    <a href="https://www.instagram.com/alicekellen_/?hl=es">instagram</a>
+    <a href="https://www.facebook.com/parationline/posts/joana-marc%C3%BAs-con-solo-25-a%C3%B1os-se-ha-convertido-en-un-fen%C3%B3meno-literario-los-deta/1564048015757292/">facebook</a>
+    <a href="https://x.com/arigodoyarg">|X|</a>
+    </nav>
+</footer>
+</body>
+<html>
